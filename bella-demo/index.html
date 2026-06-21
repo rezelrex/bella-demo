@@ -545,14 +545,14 @@
     // Static opening message — feels natural, doesn't burn API credits
     setTimeout(() => {
       const greeting = "Hi! 💛 Welcome to Bella Aesthetic Clinic. I'm here to help with treatment info, pricing, or booking a consultation. What can I help you with?";
-      conversation.push({ role: 'assistant', content: greeting, time: nowTime() });
       renderMessage('assistant', greeting);
-      saveConversation();
     }, 400);
   }
 
   // On load: try to restore conversation, else show greeting
   window.addEventListener('DOMContentLoaded', () => {
+    sessionStorage.removeItem('bella_chat');
+    conversation = [];
     const restored = loadConversation();
     if (!restored) showGreeting();
     inputEl.focus();
