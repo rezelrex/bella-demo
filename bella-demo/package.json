@@ -1,0 +1,10 @@
+{
+  "name": "bella-demo",
+  "version": "1.0.0",
+  "description": "REZLSG WhatsApp AI Agent — Bella Aesthetic Clinic Demo",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
